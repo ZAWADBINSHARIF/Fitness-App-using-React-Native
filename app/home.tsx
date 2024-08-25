@@ -1,8 +1,6 @@
 import { View, Text, Image } from 'react-native';
 import React, { useState } from 'react';
 import { useRoute } from '@react-navigation/native';
-import { useNavigation } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FontAwesome } from '@expo/vector-icons';
 import { Colors } from '@/constants/Colors';
@@ -15,7 +13,12 @@ const home = () => {
     console.log(router.name);
 
     return (
-        <SafeAreaView>
+        <SafeAreaView
+            style={{
+                flex: 1,
+                backgroundColor: 'white'
+            }}
+        >
             <View
                 style={{
                     width: '100%',
