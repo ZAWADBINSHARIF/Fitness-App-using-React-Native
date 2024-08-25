@@ -4,13 +4,12 @@ import { useRoute } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FontAwesome } from '@expo/vector-icons';
 import { Colors } from '@/constants/Colors';
+import { StatusBar } from 'expo-status-bar';
 
 const home = () => {
 
     const router = useRoute();
     const [notification, setNotification] = useState(false);
-
-    console.log(router.name);
 
     return (
         <SafeAreaView
@@ -19,6 +18,9 @@ const home = () => {
                 backgroundColor: 'white'
             }}
         >
+
+            <StatusBar style='dark' />
+
             <View
                 style={{
                     width: '100%',
